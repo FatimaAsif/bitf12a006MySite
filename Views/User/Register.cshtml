@@ -1,0 +1,141 @@
+﻿@model Website.Models.User
+
+<!DOCTYPE html>
+@{
+
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<script>
+    function f1() {
+
+        $('#Check').on('click', function () {
+            var s = $('#email').val();
+            $.getJSON('~/User/checkEmail?email' + s, function (data) {
+                if (data == true) {
+                   
+                    alert('Already Exist User Email');
+                }
+
+                else {
+                    alert('Not Exist');
+                }
+            });
+        });
+    }
+</script>
+
+
+<div class=" row">
+    <div class="col-md-10" style="color:white">
+
+        <center><p style="margin-top:150px"><h1>Register Now </h1></p></center>
+
+        <form class="form-horizontal" action=" ~/User/AddRegisterInfo" method="post">
+
+
+            <fieldset>
+                <!-- Form Name -->
+
+                <legend></legend>
+
+                <!-- for printing result of check email button-->
+                <div class="form-group">
+                    <div class="col-sm-12 col-md-12" id="result">
+                    </div>
+                </div>
+
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="name" style="color:white">Name</label>
+                    <div class="col-md-4">
+                        <input autofocus="" class="form-control input-md" id="name" name="name" placeholder="Name" type="text" value="" required="" />
+                        <span class="field-validation-valid" data-valmsg-for="name" data-valmsg-replace="true"></span>
+
+                    </div>
+                </div>
+
+                <!-- Address-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="Address" style="color:white">Address</label>
+                    <div class="col-md-4">
+                        <input class="form-control input-md" id="address" name="address" placeholder="Address" type="text" value="" required="" />
+                        <span class="field-validation-valid" data-valmsg-for="address" data-valmsg-replace="true"></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="email" style="color:white">Email</label>
+                    <div class="col-md-4">
+                        <input class="form-control input-md" id="email" name="email" placeholder="e.g. example@domain.com" type="email" value="" required="" />
+                        <input type="button" id="Check" name="Check" class="btn btn-success" value="Check" onclick="f1" />
+                        <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+
+                    </div>
+
+                </div>
+
+                <!-- Password input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="password" style="color:white">Password</label>
+                    <div class="col-md-4">
+                        <input class="form-control input-md" id="password" name="password" placeholder="Password" type="password" value="" required="" />
+                        <span class="field-validation-valid" data-valmsg-for="password" data-valmsg-replace="true"></span>
+
+                    </div>
+                </div>
+
+                <!-- Password input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="confirmPassword" style="color:white">Confirm Password</label>
+                    <div class="col-md-4">
+                        <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password" class="form-control input-md" required="" />
+                        <span class="field-validation-valid" data-valmsg-for="password" data-valmsg-replace="true"></span>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="phoneno" style="color:white"> Phone No</label>
+                    <div class="col-md-4">
+                        <input id="phoneno" name="phoneno" type="text" placeholder="0300-1234567" class="form-control input-md" required="" />
+                        <span class="field-validation-valid" data-valmsg-for="phoneno" data-valmsg-replace="true"></span>
+
+                    </div>
+                </div>
+
+                <!-- Button (Double) -->
+                <div class="form-group">           
+                    <label class="col-md-4 control-label" for="signup" style="margin-left:565px "></label>
+                    <div class="col-md-8" style="margin-left:565px ">
+                        <input type="submit" id="signup" name="signup" class="btn btn-success" value="signup" />
+
+                    </div>
+                </div>
+
+            </fieldset>
+            }
+        </form>
+        </div>
+        <div class="col-md-2" style="margin-top:100px">
+            <div class="well sidebar-nav-fixed">
+                <label class="nav-header">  Menu</label>
+                <ul>
+                    <!--<li class="nav-header">  <a>Menu</a></li>-->
+                    <li> <a href="~/Products/Pizza">Pizzas</a></li>
+                    <li> <a href="~/Products/Burgers">Burgers</a></li>
+                    <li> <a href="~/Products/Fries">Fries</a></li>
+                    <li> <a href="~/Products/Deals">Deals</a></li>
+                </ul>
+                <img src="~/images/deal3_03.png" width="175" height="150" />
+                <img src="~/Deals/Pizza-Deals_image.png" width="175" height="150" />
+
+            </div>
+
+        </div>
+    </div>

@@ -1,0 +1,34 @@
+﻿
+@model Website.Models.Product
+
+<!DOCTYPE html>
+@{
+
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<article class="col-1">
+    <div class="bg">
+        <div class="padding " style="margin-top:150px">
+
+            <div>
+                <a href="~/Admin/AddProduct"><input style="margin-left:200px ; margin-top:30px"  width="30" height="30" type="button" value="Add Item" ></a><br />
+                <a href="~/Admin/UpdateProduct" />
+                    <input style="margin-left: 200px; margin-top: 30px" width="20" height="20" type="button" value="Update Item" /><br />
+                    <a href="~/Admin/DeleteProduct" />
+                     <input style="margin-left: 200px; margin-top: 30px" width="20" height="20" type="button" value="Delete Item" /><br />
+                       
+                <a href="~/Admin/UpdateUser"><input style="margin-left: 200px; margin-top: 30px" width="20" height="20" type="button" value="Update User"></a><br />
+                <a href="~/Admin/ViewUser" />
+                <input style="margin-left: 200px; margin-top: 30px" width="20" height="20" type="button" value="View User" /><br />
+                <a href="~/Admin/DeleteUser" />
+                <input style="margin-left: 200px; margin-top: 30px" width="20" height="20" type="button" value="Delete User" /><br />
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+

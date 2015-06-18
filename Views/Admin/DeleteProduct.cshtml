@@ -1,0 +1,91 @@
+﻿@model Website.Models.Product
+<!DOCTYPE html>
+@{
+
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<h2>Delete</h2>
+
+<div class=" row">
+    <div class="col-md-10" style="color:white">
+
+        <center><p style="margin-top:150px; "><h1>Delete Product</h1></p></center>
+        <section>
+            <form class="form-horizontal" method="post" action="~/Admin/DeleteProductInfo">
+
+                <fieldset>
+                    <legend> </legend>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="id" style="color:white"><b>Id of Product</b></label>
+                        <div class="col-md-4">
+                            <input class="form-control input-md" id="id" name="Id" placeholder="" type="text" value="" required="" />
+                            <span class="field-validation-valid" data-valmsg-for="id" data-valmsg-replace="true"></span>
+
+                        </div>
+                    </div>
+
+                    
+                    <!--Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="category" style="color:white"><b>Category of Product</b></label>
+                        <div class="col-md-4">
+
+                            <select id="category" name="Category" style="color:black"   required="">
+                                <option value="Burger">Burger</option>
+                                <option value="Fries">Fries</option>
+                                <option value="Deals">Deal</option>
+                                <option value="Pizza">Pizza</option>
+                            </select>
+
+                            @* <span class="field-validation-valid" data-valmsg-for="category" data-valmsg-replace="true"></span>*@
+
+                        </div>
+                    </div>
+
+                    <!--Text input-->
+                    @*<div class="form-group">
+                        <label class="col-md-4 control-label" for="image" style="color:white"><b>Image of Product</b></label>
+                        <div class="col-md-4">
+                            <input type="file" id="file" name="Path" />
+                            <span class="field-validation-valid" data-valmsg-for="image" data-valmsg-replace="true"></span>
+
+                        </div>
+                    </div>*@
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="Submit"></label>
+                        <div class="col-md-4">
+                            <input type="submit" id="submit" name="submit" class="btn btn-info btn-lg btn-block" value="Submit" />
+                        </div>
+                    </div>
+                    <br />
+
+                </fieldset>
+            </form>
+        </section>
+
+    </div>
+    <div class="col-md-2" style="margin-top:100px">
+        <div class="well sidebar-nav-fixed">
+            <label class="nav-header">  Menu</label>
+            <ul>
+                <!--<li class="nav-header">  <a>Menu</a></li>-->
+                <li> <a href="~/Products/Pizza">Pizzas</a></li>
+                <li> <a href="~/Products/Burgers">Burgers</a></li>
+                <li> <a href="~/Products/Fries">Fries</a></li>
+                <li> <a href="~/Products/Deals">Deals</a></li>
+
+            </ul>
+            <img src="~/images/deal3_03.png" width="175" height="150" />
+            <img src="~/Deals/Pizza-Deals_image.png" width="175" height="150" />
+
+        </div>
+
+    </div>
+
+</div>
+
+

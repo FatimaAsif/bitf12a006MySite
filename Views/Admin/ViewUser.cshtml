@@ -1,0 +1,47 @@
+﻿@model List<Website.Models.User>
+<!DOCTYPE html>
+@{
+
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<div class=" row" >
+
+    <div class="col-md-10" style="margin-top:160px">
+        <center>
+            <h1> View User</h1>
+
+            <ul>
+                @foreach (var l in Model)
+                {
+                    <li><label style="color:white">Name: @l.Name  </label><br /></li>
+                    <li><label style="color:white">Address : @l.Address   </label><br /></li>
+                    <li><label style="color:white">Email : @l.Email </label><br /></li>
+                    <li><label style="color:white">Phone# : @l.PhoneNo </label><br /></li>
+                    <li><label style="color:white">---------------------------- </label><br /></li>
+
+
+
+                }
+            </ul>
+        </center>
+    </div>
+
+        <div class="col-md-2" style="margin-top:100px">
+            <div class="well sidebar-nav-fixed">
+                <label class="nav-header">  Menu</label>
+                <ul>
+                    <!--<li class="nav-header">  <a>Menu</a></li>-->
+                    <li> <a href="~/Products/Pizza">Pizzas</a></li>
+                    <li> <a href="~/Products/Burgers">Burgers</a></li>
+                    <li> <a href="~/Products/Fries">Fries</a></li>
+                    <li> <a href="~/Products/Deals">Deals</a></li>
+                </ul>
+                <img src="~/images/deal3_03.png" width="175" height="150" />
+                <!--<img src="Deals/Pizza-Deals_image.png" width="175" height="150" />-->
+
+            </div>
+
+        </div>
+    </div>

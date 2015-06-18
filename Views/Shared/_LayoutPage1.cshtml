@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+@*@model.Website.Models.User;*@
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/bootstrap.css" rel="stylesheet" />
+    <script src="~/bootstrap.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    <link href="~/bootstrap.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="~/bootstrap.js"></script>
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="~/bootstrap.css" rel="stylesheet" />
+    <script src="~/bootstrap.js"></script>
+</head>
+<body style='background-color: #400000;'>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+
+            <img src="~/images/fast_food-2.jpg" width="250" height="100 " />
+
+        </div>
+
+        <div>
+            <ul class=" nav navbar-nav ">
+                <li> <a class="navbar-brand" href="#">Online Fast Food Shop</a></li>
+                <li class="active"><a href="~/Home/Index">Home</a></li>
+                <li><a href="~/Home/AboutUs">AboutUs</a></li>
+                <li><a href="~/Home/ContactUs">ContactUs</a></li>
+               @* <li><a href="~/Admin/Login">Admin DashBoard</a></li>*@
+                <li><a href="~/User/Login">Login</a></li>
+                <li><a href="~/User/Register">Register</a></li>
+            </ul>
+        </div>
+
+        <form class="navbar-form navbar-left pull-right"  action="~/Home/Search" method="post">
+            <div class="form-group">
+               @* <input type="text" class="form-control" placeholder="Search Product" />*@
+                <select id="category" name="Category" style="color:black ; height:50px ;width:200px" >
+                    <option id="" value="category">Search Product</option>
+                    <option id="b" value="Burger">Burger</option>
+                    <option id="f" value="Fries">Fries</option>
+                    <option id="d" value="Deals">Deal</option>
+                    <option id="p" value="Pizza">Pizza</option>
+                </select>
+
+            </div>
+            <button type="submit" class="btn btn-danger">Submit</button>
+        </form>
+
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+    <footer class="nav navbar-fixed-bottom" style='background-color: #000000; color:white'>
+        <p> All rights reserved</p>
+    </footer>
+
+</body>
+</html>

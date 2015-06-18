@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "DeleteUser";
+}
+
+<h2>DeleteUser</h2>
+@model Website.Models.User
+<!DOCTYPE html>
+@{
+
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<center>
+
+    <h2>UpdateUser</h2>
+
+    @using (Html.BeginForm("DeleteUserInfo", "Admin"))
+    {
+
+        @Html.ValidationSummary(true)
+
+
+        @*@Html.HiddenFor(model => model.DPId)
+            @Html.HiddenFor(model => model.Imagepath)*@
+        <div class="editor-label" style="margin-top:160px">
+            @Html.LabelFor(model => model.Id)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Id)
+            @Html.ValidationMessageFor(model => model.Id)
+        </div>
+
+ <p>
+            <input type="submit" value="Save" />
+        </p>
+    }
+
+    <div>
+        @* @Html.ActionLink("", "")*@
+    </div>
+
+</center>
